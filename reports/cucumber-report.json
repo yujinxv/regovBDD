@@ -1,0 +1,96 @@
+[
+  {
+    "elements": [
+      {
+        "id": "verify-the-omni-page-login;omni-page-success-login",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Omni page success login",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "Omni url is provided",
+            "result": {
+              "status": "passed",
+              "duration": 10717772100
+            },
+            "line": 5,
+            "match": {
+              "location": "c:\\ReGov\\omni-bo-automation\\step-definitions\\bo-login.js:5"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "Login Username and Password is provided",
+            "result": {
+              "status": "passed",
+              "duration": 119842600
+            },
+            "line": 6,
+            "match": {
+              "location": "c:\\ReGov\\omni-bo-automation\\step-definitions\\bo-login.js:14"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "Click on the Login button",
+            "result": {
+              "status": "passed",
+              "duration": 12937945300
+            },
+            "line": 7,
+            "match": {
+              "location": "c:\\ReGov\\omni-bo-automation\\step-definitions\\bo-login.js:22"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "Click the Add User button from All Users tab and add a new user",
+            "result": {
+              "status": "passed",
+              "duration": 352660700
+            },
+            "line": 8,
+            "match": {
+              "location": "c:\\ReGov\\omni-bo-automation\\step-definitions\\bo-login.js:33"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 281454200
+            },
+            "hidden": true,
+            "match": {
+              "location": "c:\\ReGov\\omni-bo-automation\\node_modules\\selenium-cucumber-js\\runtime\\world.js:250"
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@BO-Login",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "verify-the-omni-page-login",
+    "keyword": "Feature",
+    "line": 2,
+    "name": "Verify the Omni page login",
+    "tags": [
+      {
+        "name": "@BO-Login",
+        "line": 1
+      }
+    ],
+    "uri": "c:/ReGov/omni-bo-automation/features/bo-login.feature"
+  }
+]

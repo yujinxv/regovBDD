@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+    <testsuite name="verify-the-omni-page-login;omni-page-success-login" tests="4" failures="0" skipped="0">
+        <properties>
+            <property name="@BO-Login" value="true">
+            </property>
+            <property name="URI" value="c:/ReGov/omni-bo-automation/features/bo-login.feature">
+            </property>
+        </properties>
+        <testcase name="Given Omni url is provided" classname="verify-the-omni-page-login;omni-page-success-login" time="10.7177721">
+        </testcase>
+        <testcase name="When Login Username and Password is provided" classname="verify-the-omni-page-login;omni-page-success-login" time="0.1198426">
+        </testcase>
+        <testcase name="Then Click on the Login button" classname="verify-the-omni-page-login;omni-page-success-login" time="12.9379453">
+        </testcase>
+        <testcase name="And Click the Add User button from All Users tab and add a new user" classname="verify-the-omni-page-login;omni-page-success-login" time="0.3526607">
+        </testcase>
+    </testsuite>
+</testsuites>
