@@ -12,12 +12,13 @@
             "keyword": "Given ",
             "name": "Omni url is provided",
             "result": {
-              "status": "passed",
-              "duration": 10717772100
+              "status": "failed",
+              "duration": 5276389923,
+              "error_message": "SessionNotCreatedError: session not created: This version of ChromeDriver only supports Chrome version 86\nCurrent browser version is 89.0.4389.114 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome\n  (Driver info: chromedriver=86.0.4240.22 (398b0743353ff36fb1b82468f63a3a93b4e2e89e-refs/branch-heads/4240@{#378}),platform=Mac OS X 10.15.7 x86_64)\n    at Object.checkLegacyResponse (/Users/eugeneaquino/Documents/omni-automation-BO/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/lib/error.js:529:15)\n    at parseHttpResponse (/Users/eugeneaquino/Documents/omni-automation-BO/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/lib/http.js:509:13)\n    at /Users/eugeneaquino/Documents/omni-automation-BO/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/lib/http.js:441:30\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)\nFrom: Task: WebDriver.createSession()\n    at Function.createSession (/Users/eugeneaquino/Documents/omni-automation-BO/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/lib/webdriver.js:769:24)\n    at Function.createSession (/Users/eugeneaquino/Documents/omni-automation-BO/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/chrome.js:761:15)\n    at createDriver (/Users/eugeneaquino/Documents/omni-automation-BO/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/index.js:170:33)\n    at Builder.build (/Users/eugeneaquino/Documents/omni-automation-BO/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/index.js:642:16)\n    at new module.exports (/Users/eugeneaquino/Documents/omni-automation-BO/node_modules/selenium-cucumber-js/runtime/chromeDriver.js:20:8)\n    at getDriverInstance (/Users/eugeneaquino/Documents/omni-automation-BO/node_modules/selenium-cucumber-js/runtime/world.js:54:22)\n    at /Users/eugeneaquino/Documents/omni-automation-BO/node_modules/selenium-cucumber-js/runtime/world.js:207:29"
             },
             "line": 5,
             "match": {
-              "location": "c:\\ReGov\\omni-bo-automation\\step-definitions\\bo-login.js:5"
+              "location": "/Users/eugeneaquino/Documents/omni-automation-BO/step-definitions/bo-login.js:5"
             }
           },
           {
@@ -25,12 +26,11 @@
             "keyword": "When ",
             "name": "Login Username and Password is provided",
             "result": {
-              "status": "passed",
-              "duration": 119842600
+              "status": "skipped"
             },
             "line": 6,
             "match": {
-              "location": "c:\\ReGov\\omni-bo-automation\\step-definitions\\bo-login.js:14"
+              "location": "/Users/eugeneaquino/Documents/omni-automation-BO/step-definitions/bo-login.js:14"
             }
           },
           {
@@ -38,12 +38,11 @@
             "keyword": "Then ",
             "name": "Click on the Login button",
             "result": {
-              "status": "passed",
-              "duration": 12937945300
+              "status": "skipped"
             },
             "line": 7,
             "match": {
-              "location": "c:\\ReGov\\omni-bo-automation\\step-definitions\\bo-login.js:22"
+              "location": "/Users/eugeneaquino/Documents/omni-automation-BO/step-definitions/bo-login.js:22"
             }
           },
           {
@@ -51,24 +50,24 @@
             "keyword": "And ",
             "name": "Click the Add User button from All Users tab and add a new user",
             "result": {
-              "status": "passed",
-              "duration": 352660700
+              "status": "skipped"
             },
             "line": 8,
             "match": {
-              "location": "c:\\ReGov\\omni-bo-automation\\step-definitions\\bo-login.js:33"
+              "location": "/Users/eugeneaquino/Documents/omni-automation-BO/step-definitions/bo-login.js:33"
             }
           },
           {
             "arguments": [],
             "keyword": "After ",
             "result": {
-              "status": "passed",
-              "duration": 281454200
+              "status": "failed",
+              "duration": 3186748,
+              "error_message": "SessionNotCreatedError: session not created: This version of ChromeDriver only supports Chrome version 86\nCurrent browser version is 89.0.4389.114 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome\n  (Driver info: chromedriver=86.0.4240.22 (398b0743353ff36fb1b82468f63a3a93b4e2e89e-refs/branch-heads/4240@{#378}),platform=Mac OS X 10.15.7 x86_64)\n    at Object.checkLegacyResponse (/Users/eugeneaquino/Documents/omni-automation-BO/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/lib/error.js:529:15)\n    at parseHttpResponse (/Users/eugeneaquino/Documents/omni-automation-BO/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/lib/http.js:509:13)\n    at /Users/eugeneaquino/Documents/omni-automation-BO/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/lib/http.js:441:30\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)\nFrom: Task: WebDriver.createSession()\n    at Function.createSession (/Users/eugeneaquino/Documents/omni-automation-BO/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/lib/webdriver.js:769:24)\n    at Function.createSession (/Users/eugeneaquino/Documents/omni-automation-BO/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/chrome.js:761:15)\n    at createDriver (/Users/eugeneaquino/Documents/omni-automation-BO/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/index.js:170:33)\n    at Builder.build (/Users/eugeneaquino/Documents/omni-automation-BO/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/index.js:642:16)\n    at new module.exports (/Users/eugeneaquino/Documents/omni-automation-BO/node_modules/selenium-cucumber-js/runtime/chromeDriver.js:20:8)\n    at getDriverInstance (/Users/eugeneaquino/Documents/omni-automation-BO/node_modules/selenium-cucumber-js/runtime/world.js:54:22)\n    at /Users/eugeneaquino/Documents/omni-automation-BO/node_modules/selenium-cucumber-js/runtime/world.js:207:29\nFrom: Task: WebDriver.takeScreenshot()\n    at thenableWebDriverProxy.schedule (/Users/eugeneaquino/Documents/omni-automation-BO/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/lib/webdriver.js:807:17)\n    at thenableWebDriverProxy.takeScreenshot (/Users/eugeneaquino/Documents/omni-automation-BO/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/lib/webdriver.js:1083:17)\n    at createWorld.<anonymous> (/Users/eugeneaquino/Documents/omni-automation-BO/node_modules/selenium-cucumber-js/runtime/world.js:253:27)\n    at processTicksAndRejections (internal/process/task_queues.js:75:11)"
             },
             "hidden": true,
             "match": {
-              "location": "c:\\ReGov\\omni-bo-automation\\node_modules\\selenium-cucumber-js\\runtime\\world.js:250"
+              "location": "/Users/eugeneaquino/Documents/omni-automation-BO/node_modules/selenium-cucumber-js/runtime/world.js:250"
             }
           }
         ],
@@ -91,6 +90,6 @@
         "line": 1
       }
     ],
-    "uri": "c:/ReGov/omni-bo-automation/features/bo-login.feature"
+    "uri": "/Users/eugeneaquino/Documents/omni-automation-BO/features/bo-login.feature"
   }
 ]
