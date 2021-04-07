@@ -249,7 +249,6 @@ module.exports = {
     scrollToElement: function (element) {
         return driver.executeScript('return arguments[0].scrollIntoView(false);', element);
     },
-
     /**
     * Select a value inside a dropdown list by its text
     * @param {string} elementSelector - css or xpath selector

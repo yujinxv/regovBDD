@@ -1,40 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-    <testsuite name="verify-the-omni-page-login;omni-page-success-login" tests="4" failures="1" skipped="3">
+    <testsuite name="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-a-maker,checker" tests="7" failures="0" skipped="0">
         <properties>
-            <property name="@BO-Login" value="true">
+            <property name="@BO-AddNewUser" value="true">
             </property>
-            <property name="URI" value="/Users/eugeneaquino/Documents/omni-automation-BO/features/bo-login.feature">
+            <property name="URI" value="c:/ReGov/omni-bo-automation/features/addnewuser-makerchecker.feature">
             </property>
         </properties>
-        <testcase name="Given Omni url is provided" classname="verify-the-omni-page-login;omni-page-success-login" time="5.276389923">
-            <failure message="SessionNotCreatedError: session not created: This version of ChromeDriver only supports Chrome version 86">SessionNotCreatedError: session not created: This version of ChromeDriver only supports Chrome version 86
-Current browser version is 89.0.4389.114 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
-  (Driver info: chromedriver=86.0.4240.22 (398b0743353ff36fb1b82468f63a3a93b4e2e89e-refs/branch-heads/4240@{#378}),platform=Mac OS X 10.15.7 x86_64)
-    at Object.checkLegacyResponse (/Users/eugeneaquino/Documents/omni-automation-BO/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/lib/error.js:529:15)
-    at parseHttpResponse (/Users/eugeneaquino/Documents/omni-automation-BO/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/lib/http.js:509:13)
-    at /Users/eugeneaquino/Documents/omni-automation-BO/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/lib/http.js:441:30
-    at processTicksAndRejections (internal/process/task_queues.js:93:5)
-From: Task: WebDriver.createSession()
-    at Function.createSession (/Users/eugeneaquino/Documents/omni-automation-BO/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/lib/webdriver.js:769:24)
-    at Function.createSession (/Users/eugeneaquino/Documents/omni-automation-BO/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/chrome.js:761:15)
-    at createDriver (/Users/eugeneaquino/Documents/omni-automation-BO/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/index.js:170:33)
-    at Builder.build (/Users/eugeneaquino/Documents/omni-automation-BO/node_modules/selenium-cucumber-js/node_modules/selenium-webdriver/index.js:642:16)
-    at new module.exports (/Users/eugeneaquino/Documents/omni-automation-BO/node_modules/selenium-cucumber-js/runtime/chromeDriver.js:20:8)
-    at getDriverInstance (/Users/eugeneaquino/Documents/omni-automation-BO/node_modules/selenium-cucumber-js/runtime/world.js:54:22)
-    at /Users/eugeneaquino/Documents/omni-automation-BO/node_modules/selenium-cucumber-js/runtime/world.js:207:29</failure>
+        <testcase name="Given Omni url is provided and login page is displayed" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-a-maker,checker" time="9.603952">
         </testcase>
-        <testcase name="When Login Username and Password is provided" classname="verify-the-omni-page-login;omni-page-success-login">
-            <skipped message="">
-            </skipped>
+        <testcase name="Then Login as &quot;Maker&quot;" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-a-maker,checker" time="8.0588405">
         </testcase>
-        <testcase name="Then Click on the Login button" classname="verify-the-omni-page-login;omni-page-success-login">
-            <skipped message="">
-            </skipped>
+        <testcase name="Then Click the Add User button from All Users tab and add a new user as &quot;Maker&quot;" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-a-maker,checker" time="36.1533911">
         </testcase>
-        <testcase name="And Click the Add User button from All Users tab and add a new user" classname="verify-the-omni-page-login;omni-page-success-login">
-            <skipped message="">
-            </skipped>
+        <testcase name="And Click Logout" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-a-maker,checker" time="1.4877868">
+        </testcase>
+        <testcase name="Then Login as &quot;Checker&quot;" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-a-maker,checker" time="3.7679586">
+        </testcase>
+        <testcase name="And Approve the new user" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-a-maker,checker" time="44.2695948">
+        </testcase>
+        <testcase name="And Click Logout" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-a-maker,checker" time="1.4436271">
+        </testcase>
+    </testsuite>
+    <testsuite name="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-an-aa" tests="4" failures="0" skipped="0">
+        <properties>
+            <property name="@BO-AddNewUser" value="true">
+            </property>
+            <property name="URI" value="c:/ReGov/omni-bo-automation/features/addnewuser-makerchecker.feature">
+            </property>
+        </properties>
+        <testcase name="Given Omni url is provided and login page is displayed" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-an-aa" time="7.6658802">
+        </testcase>
+        <testcase name="Then Login as &quot;AA&quot;" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-an-aa" time="6.9495578">
+        </testcase>
+        <testcase name="Then Click the Add User button from All Users tab and add a new user as &quot;AA&quot;" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-an-aa" time="35.7630779">
+        </testcase>
+        <testcase name="And Click Logout" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-an-aa" time="1.5795507">
         </testcase>
     </testsuite>
 </testsuites>
