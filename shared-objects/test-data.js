@@ -1,6 +1,11 @@
 module.exports = {
-    url: "https://sit.kiboperations.com/",
-    username: "muralisamkr",
+    siturl: "https://sit.kiboperations.com/",
+    uaturl: "https://uat.kiboperations.com/",
+    samkrusername: "muralisamkr",
+    brmkrusername: "eugenebrmkr",
+    brckrusername: "eugenebrckr",
+    fmmkrusername: "eugenefmmkr",
+    fmckrusername: "eugenefmckr",
     password: "Abcd123@",
     //All Users tab
     loginid: Math.floor((Math.random() * 100) + 1) + "AutoNewuser",
