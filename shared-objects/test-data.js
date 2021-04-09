@@ -12,11 +12,32 @@ module.exports = {
     fmckrusername: "eugenefmckr",
     password: "Abcd123@",
     //All Users tab
-    loginid: Math.floor((Math.random() * 1000) + 1) + "AutoNewuser",
-    name: makeid(5) + "AutoNewuser",
+    //=============Login Id's========================
+    loginid_mkr: Math.floor((Math.random() * 1000) + 1) + "mkr"+"AutoNewuser",
+    loginid_aa: Math.floor((Math.random() * 1000) + 1) + "AA"+"AutoNewuser",
+    loginid_apr: Math.floor((Math.random() * 1000) + 1) + "Apr"+"AutoNewuser",
+    loginid_rej: Math.floor((Math.random() * 1000) + 1) + "Rej"+"AutoNewuser",
+    loginid_sus: Math.floor((Math.random() * 1000) + 1) + "Sus"+"AutoNewuser",
+    loginid_react: Math.floor((Math.random() * 1000) + 1) + "React"+"AutoNewuser",
+    loginid_term: Math.floor((Math.random() * 1000) + 1) + "Tmt"+"AutoNewuser",
+    //===============Name==============================
+    name_mkr: makeid(5) + "mkr"+"AutoNewuser",
+    name_aa: makeid(5) + "AA"+"AutoNewuser",
+    name_apr: makeid(5) + "Apr"+"AutoNewuser",
+    name_rej: makeid(5) + "Rej"+"AutoNewuser",
+    name_sus: makeid(5) + "Sus"+"AutoNewuser",
+    name_react: makeid(5) + "React"+"AutoNewuser",
+    name_term: makeid(5) + "Tmt"+"AutoNewuser",
+
     homebranch: "Seremban",
     dept: "CE",
-    email: Math.floor((Math.random() * 1000) + 1) + "AutoNewusermail@mail.com",
+    //===============Email==============================
+    email_mkr: Math.floor((Math.random() * 1000) + 1) + "mkr"+"AutoNewusermail@mail.com",
+    email_aa: Math.floor((Math.random() * 1000) + 1) + "AA"+"AutoNewusermail@mail.com",
+    email_apr: Math.floor((Math.random() * 1000) + 1) + "Apr"+"AutoNewusermail@mail.com",
+    email_rej: Math.floor((Math.random() * 1000) + 1) + "Rej"+"AutoNewusermail@mail.com",
+    email_sus: Math.floor((Math.random() * 1000) + 1) + "Sus"+"AutoNewusermail@mail.com",
+
     mobileno: "765875432",
     description: "Auto Test Desc",
     assigngroup: "CE HQ",
@@ -26,6 +47,14 @@ module.exports = {
     addusersuccessmsgapprove2: " account has been created and the maker will be notified.",
     addusersuccessmsgaa1: "New User created successfully",
     addusersuccessmsgaa2: " has been created.",
+    addusersuccessmsgreject1: "Edit User request rejected",
+    addusersuccessmsgreject2: "The maker will be notified.",
+    suspendusersuccessmsgapprove1: "New User Suspend request approved",
+    suspendusersuccessmsgapprove2: " account has been suspended and the maker will be notified.",
+    reactivateusersuccessmsgapprove1: "Reactivate User request approved",
+    reactivateusersuccessmsgapprove2: " account has been enabled and the maker will be notified.",
+    terminateusersuccessmsgapprove1: "User Termination request approved",
+    terminateusersuccessmsgapprove2: " user has been terminated and the maker will be notified.",
 };
 //Function to generate random strings
 function makeid(length) {

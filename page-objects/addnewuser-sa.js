@@ -11,6 +11,7 @@ module.exports = {
         //Dashboard Objects - All Users tab
         tabs: by.xpath("//div[@class='tabs']"),
         alluserstab: by.xpath("//div[contains(text(),'All Users')]"),
+        usergroupstab: by.xpath("//div[contains(text(),'User Groups')]"),
         btnadduser: by.xpath("//button[*]/div[contains(text(),'Add User')]"),
         txtloginid: by.xpath("//input[@name='loginID']"),
         txtname: by.xpath("//input[@name='name']"),
@@ -33,8 +34,24 @@ module.exports = {
         imgloading: by.xpath("//h1[normalize-space()='Loading...']"),
         viewicon: by.xpath("//div[@id='tableViewButton'][7]"),
         btnapprove: by.xpath("//div[normalize-space()='Approve']"),
+        btnreject: by.xpath("//div[normalize-space()='Reject']"),
+        txtrejectremarks: by.xpath("//textarea[@name='rejectRemark']"),
+        btnsubmit: by.xpath("//div[normalize-space()='Submit']"),
+        actionsicon: by.xpath("//*[@id='tableViewButton']/following::div[contains(@id,'setShowBtn')]"),
+        actsuspendeuser: by.xpath("//div[contains(text(),'Suspend User')]"),
+        actreactivateeuser: by.xpath("//div[contains(text(),'Reactivate User')]"),
+        actterminateeuser: by.xpath("//div[contains(text(),'Terminate User')]"),
+        btnyescontinue: by.id('continueModalBtn'),
+        suspendmodalmsg1: by.xpath("//*[contains(text(),'Suspend User request submitted')]"),
+        suspendmodalmsg2: by.xpath("//*[contains(text(),'This request has been submitted and pending for review.')]"),
+        reactivatemodalmsg1: by.xpath("//*[contains(text(),'Reactivate User request submitted')]"),
+        reactivatemodalmsg2: by.xpath("//*[contains(text(),'This request has been submitted and pending for review.')]"),
+        terminatemodalmsg1: by.xpath("//*[contains(text(),'Terminate User request submitted')]"),
+        terminatemodalmsg2: by.xpath("//*[contains(text(),'This request has been submitted and pending for review.')]"),
+        
         //Logout
         logout: by.xpath("//span[normalize-space()='Log Out']"),
+        //logoutmodal: by.xpath("//span[contains(text(),'Yes, Logout')]"),
         logoutmodal: by.id('continueModalBtn'),
         confirmmodal: by.id('confirmModalBtn')
     },

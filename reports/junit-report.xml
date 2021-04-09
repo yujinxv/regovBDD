@@ -1,41 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-    <testsuite name="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-a-maker,checker" tests="7" failures="0" skipped="0">
+    <testsuite name="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-a-maker-and-approve-as-a-checker" tests="6" failures="0" skipped="0">
         <properties>
             <property name="@BO-AddNewUser" value="true">
             </property>
             <property name="URI" value="c:/ReGov/omni-bo-automation/features/addnewuser-makerchecker.feature">
             </property>
         </properties>
-        <testcase name="Given Omni url is provided and login page is displayed" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-a-maker,checker" time="9.603952">
+        <testcase name="Given Omni url is provided and login page is displayed" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-a-maker-and-approve-as-a-checker" time="10.626542">
         </testcase>
-        <testcase name="Then Login as &quot;Maker&quot;" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-a-maker,checker" time="8.0588405">
+        <testcase name="Then Login as &quot;Maker&quot;" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-a-maker-and-approve-as-a-checker" time="7.12591">
         </testcase>
-        <testcase name="Then Click the Add User button from All Users tab and add a new user as &quot;Maker&quot;" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-a-maker,checker" time="36.1533911">
+        <testcase name="Then Click the Add User button from All Users tab and add a new user to &quot;Approve&quot;" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-a-maker-and-approve-as-a-checker" time="37.2909546">
         </testcase>
-        <testcase name="And Click Logout" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-a-maker,checker" time="1.4877868">
+        <testcase name="And Click Logout" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-a-maker-and-approve-as-a-checker" time="1.6096585">
         </testcase>
-        <testcase name="Then Login as &quot;Checker&quot;" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-a-maker,checker" time="3.7679586">
+        <testcase name="Then Login as &quot;Checker&quot;" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-a-maker-and-approve-as-a-checker" time="4.7540983">
         </testcase>
-        <testcase name="And Approve the new user" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-a-maker,checker" time="44.2695948">
-        </testcase>
-        <testcase name="And Click Logout" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-a-maker,checker" time="1.4436271">
+        <testcase name="And &quot;Approve&quot; the new user" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-a-maker-and-approve-as-a-checker" time="44.2178836">
         </testcase>
     </testsuite>
-    <testsuite name="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-an-aa" tests="4" failures="0" skipped="0">
+    <testsuite name="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;suspend-a-new-user-as-a-maker-and-approve-as-a-checker" tests="6" failures="0" skipped="0">
         <properties>
             <property name="@BO-AddNewUser" value="true">
             </property>
             <property name="URI" value="c:/ReGov/omni-bo-automation/features/addnewuser-makerchecker.feature">
             </property>
         </properties>
-        <testcase name="Given Omni url is provided and login page is displayed" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-an-aa" time="7.6658802">
+        <testcase name="Given Omni url is provided and login page is displayed" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;suspend-a-new-user-as-a-maker-and-approve-as-a-checker" time="8.4208586">
         </testcase>
-        <testcase name="Then Login as &quot;AA&quot;" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-an-aa" time="6.9495578">
+        <testcase name="Then Login as &quot;Maker&quot;" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;suspend-a-new-user-as-a-maker-and-approve-as-a-checker" time="7.0607936">
         </testcase>
-        <testcase name="Then Click the Add User button from All Users tab and add a new user as &quot;AA&quot;" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-an-aa" time="35.7630779">
+        <testcase name="And &quot;Suspend&quot; the new user as a &quot;Maker&quot;" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;suspend-a-new-user-as-a-maker-and-approve-as-a-checker" time="36.9652867">
         </testcase>
-        <testcase name="And Click Logout" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-an-aa" time="1.5795507">
+        <testcase name="And Click Logout" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;suspend-a-new-user-as-a-maker-and-approve-as-a-checker" time="1.5081273">
+        </testcase>
+        <testcase name="Then Login as &quot;Checker&quot;" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;suspend-a-new-user-as-a-maker-and-approve-as-a-checker" time="5.203337">
+        </testcase>
+        <testcase name="And &quot;Suspend&quot; the new user" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;suspend-a-new-user-as-a-maker-and-approve-as-a-checker" time="44.2192">
+        </testcase>
+    </testsuite>
+    <testsuite name="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;reactivate-a-suspended-user-as-a-maker-and-approve-as-a-checker" tests="6" failures="0" skipped="0">
+        <properties>
+            <property name="@BO-AddNewUser" value="true">
+            </property>
+            <property name="URI" value="c:/ReGov/omni-bo-automation/features/addnewuser-makerchecker.feature">
+            </property>
+        </properties>
+        <testcase name="Given Omni url is provided and login page is displayed" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;reactivate-a-suspended-user-as-a-maker-and-approve-as-a-checker" time="9.1895055">
+        </testcase>
+        <testcase name="Then Login as &quot;Maker&quot;" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;reactivate-a-suspended-user-as-a-maker-and-approve-as-a-checker" time="7.3649459">
+        </testcase>
+        <testcase name="And &quot;Reactivate&quot; the new user as a &quot;Maker&quot;" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;reactivate-a-suspended-user-as-a-maker-and-approve-as-a-checker" time="36.8092267">
+        </testcase>
+        <testcase name="And Click Logout" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;reactivate-a-suspended-user-as-a-maker-and-approve-as-a-checker" time="1.5117089">
+        </testcase>
+        <testcase name="Then Login as &quot;Checker&quot;" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;reactivate-a-suspended-user-as-a-maker-and-approve-as-a-checker" time="4.2977971">
+        </testcase>
+        <testcase name="And &quot;Reactivate&quot; the new user" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;reactivate-a-suspended-user-as-a-maker-and-approve-as-a-checker" time="44.2426244">
+        </testcase>
+    </testsuite>
+    <testsuite name="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;terminate-an-active-user-as-a-maker-and-approve-as-a-checker" tests="6" failures="0" skipped="0">
+        <properties>
+            <property name="@BO-AddNewUser" value="true">
+            </property>
+            <property name="URI" value="c:/ReGov/omni-bo-automation/features/addnewuser-makerchecker.feature">
+            </property>
+        </properties>
+        <testcase name="Given Omni url is provided and login page is displayed" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;terminate-an-active-user-as-a-maker-and-approve-as-a-checker" time="10.5727674">
+        </testcase>
+        <testcase name="Then Login as &quot;Maker&quot;" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;terminate-an-active-user-as-a-maker-and-approve-as-a-checker" time="7.6883998">
+        </testcase>
+        <testcase name="And &quot;Terminate&quot; the new user as a &quot;Maker&quot;" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;terminate-an-active-user-as-a-maker-and-approve-as-a-checker" time="37.013314">
+        </testcase>
+        <testcase name="And Click Logout" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;terminate-an-active-user-as-a-maker-and-approve-as-a-checker" time="1.5491305">
+        </testcase>
+        <testcase name="Then Login as &quot;Checker&quot;" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;terminate-an-active-user-as-a-maker-and-approve-as-a-checker" time="4.6837574">
+        </testcase>
+        <testcase name="And &quot;Terminate&quot; the new user" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;terminate-an-active-user-as-a-maker-and-approve-as-a-checker" time="44.2747308">
+        </testcase>
+    </testsuite>
+    <testsuite name="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-a-maker-and-reject-as-a-checker" tests="6" failures="0" skipped="0">
+        <properties>
+            <property name="@BO-AddNewUser" value="true">
+            </property>
+            <property name="URI" value="c:/ReGov/omni-bo-automation/features/addnewuser-makerchecker.feature">
+            </property>
+        </properties>
+        <testcase name="Given Omni url is provided and login page is displayed" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-a-maker-and-reject-as-a-checker" time="9.8743019">
+        </testcase>
+        <testcase name="Then Login as &quot;Maker&quot;" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-a-maker-and-reject-as-a-checker" time="8.0521294">
+        </testcase>
+        <testcase name="Then Click the Add User button from All Users tab and add a new user to &quot;Reject&quot;" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-a-maker-and-reject-as-a-checker" time="37.1240261">
+        </testcase>
+        <testcase name="And Click Logout" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-a-maker-and-reject-as-a-checker" time="1.6783025">
+        </testcase>
+        <testcase name="Then Login as &quot;Checker&quot;" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-a-maker-and-reject-as-a-checker" time="4.5150192">
+        </testcase>
+        <testcase name="And &quot;Reject&quot; the new user" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-a-maker-and-reject-as-a-checker" time="44.4859741">
+        </testcase>
+    </testsuite>
+    <testsuite name="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-an-aa" tests="3" failures="0" skipped="0">
+        <properties>
+            <property name="@BO-AddNewUser" value="true">
+            </property>
+            <property name="URI" value="c:/ReGov/omni-bo-automation/features/addnewuser-makerchecker.feature">
+            </property>
+        </properties>
+        <testcase name="Given Omni url is provided and login page is displayed" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-an-aa" time="8.9249306">
+        </testcase>
+        <testcase name="Then Login as &quot;AA&quot;" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-an-aa" time="6.8943454">
+        </testcase>
+        <testcase name="Then Click the Add User button from All Users tab and add a new user to &quot;AA&quot;" classname="verify-the-add-new-user-scenario-as-a-maker,checker-and-aa-in-system-admin;add-new-user-as-an-aa" time="36.715707">
         </testcase>
     </testsuite>
 </testsuites>
