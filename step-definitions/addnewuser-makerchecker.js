@@ -120,7 +120,7 @@ module.exports = function () {
        });
  
     
-    this.Then(/^"([^"]*)" the new user$/, { timeout: 90000}, async function (actiontype) {
+    this.Then(/^"([^"]*)" the user$/, { timeout: 90000}, async function (actiontype) {
      
       let el = driver.findElement(page.addnewuserSa.elements.imgsidenavusername);
       driver.wait(until.elementIsVisible(el),50000);
@@ -198,7 +198,7 @@ module.exports = function () {
   });
 
 
-    this.Then(/^"([^"]*)" the new user as a "([^"]*)"$/, { timeout: 100000}, async function (action,loginusertype) {
+    this.Then(/^"([^"]*)" the user as a "([^"]*)"$/, { timeout: 100000}, async function (action,loginusertype) {
 
       let el = driver.findElement(page.addnewuserSa.elements.imgsidenavusername);
       driver.wait(until.elementIsVisible(el),50000);
@@ -208,6 +208,8 @@ module.exports = function () {
       await driver.wait(until.elementLocated(page.addnewuserSa.elements.alluserssearchfield))
       if((action == "Suspend" || action == "Reactivate" || action == "Terminate") && loginusertype == "Maker"){
         var newname1 = shared.testData.name_apr;
+      }else if((action == "Suspend" || action == "Reactivate" || action == "Terminate") && loginusertype == "AA"){
+        var newname1 = shared.testData.name_aa;
       }
      driver.sleep(25000);
       await driver.findElement(page.addnewuserSa.elements.alluserssearchfield).sendKeys(newname1)
@@ -223,14 +225,29 @@ module.exports = function () {
         await driver.wait(until.elementLocated(page.addnewuserSa.elements.btnyescontinue)).click()
         //Verify the modal message
         driver.sleep(1000);
-        if(await driver.wait(until.elementLocated(page.addnewuserSa.elements.suspendmodalmsg1))){
-          if(await driver.wait(until.elementLocated(page.addnewuserSa.elements.suspendmodalmsg2))){
-            await driver.findElement(page.addnewuserSa.elements.confirmmodal).click()
-            //Move the focus to the next tab and wait to remove the duplicate hidden DOM objects before logout
-            driver.sleep(1000);
-            await driver.findElement(page.addnewuserSa.elements.usergroupstab).click()
-            driver.sleep(25000);
+        //For AA user
+        if (loginusertype == "AA"){
+          const elmodalsuspendaa = driver.findElement(page.addnewuserSa.elements.modalwindowdata_aa);
+          driver.wait(until.elementIsVisible(elmodalsuspendaa),10000);
+          var aamsgapprove = await driver.findElement(page.addnewuserSa.elements.modalwindowdata_aa).getText()
+          //Verify the success message after clicking suspend button
+            var aamsgsplitapprove = []; 
+            aamsgsplitapprove = aamsgapprove.split("\n");
+            if (aamsgsplitapprove[0].trim() === shared.testData.suspenduseraasuccessmessage1.trim()) {
+              if (aamsgsplitapprove[1].trim() === newname1.trim() + shared.testData.suspenduseraasuccessmessage2) {
+                  //await driver.findElement(page.addnewuserSa.elements.confirmmodal).click()
           }};
+          //For Maker user
+        }else{
+          if(await driver.wait(until.elementLocated(page.addnewuserSa.elements.suspendmodalmsg1))){
+              if(await driver.wait(until.elementLocated(page.addnewuserSa.elements.suspendmodalmsg2))){
+                await driver.findElement(page.addnewuserSa.elements.confirmmodal).click()
+                //Move the focus to the next tab and wait to remove the duplicate hidden DOM objects before logout
+                driver.sleep(1000);
+                await driver.findElement(page.addnewuserSa.elements.usergroupstab).click()
+                driver.sleep(25000);
+              }};
+            }
           //Reactivate the user
        }else if(action == "Reactivate"){
         await driver.wait(until.elementLocated(page.addnewuserSa.elements.actreactivateeuser)).click()
@@ -239,6 +256,20 @@ module.exports = function () {
         await driver.wait(until.elementLocated(page.addnewuserSa.elements.btnyescontinue)).click()
         //Verify the modal message
         driver.sleep(1000);
+        //For AA user
+        if (loginusertype == "AA"){
+          const elmodalreactivateaa = driver.findElement(page.addnewuserSa.elements.modalwindowdata_aa);
+          driver.wait(until.elementIsVisible(elmodalreactivateaa),10000);
+          var aamsgapprove = await driver.findElement(page.addnewuserSa.elements.modalwindowdata_aa).getText()
+          //Verify the success message after clicking reactivate button
+            var aamsgsplitapprove = []; 
+            aamsgsplitapprove = aamsgapprove.split("\n");
+            if (aamsgsplitapprove[0].trim() === shared.testData.reactivateuseraasuccessmessage1.trim()) {
+              if (aamsgsplitapprove[1].trim() === newname1.trim() + shared.testData.reactivateuseraasuccessmessage2) {
+                  //await driver.findElement(page.addnewuserSa.elements.confirmmodal).click()
+          }};
+          //For Maker user
+        }else{
         if(await driver.wait(until.elementLocated(page.addnewuserSa.elements.reactivatemodalmsg1))){
           if(await driver.wait(until.elementLocated(page.addnewuserSa.elements.reactivatemodalmsg2))){
             await driver.findElement(page.addnewuserSa.elements.confirmmodal).click()
@@ -247,6 +278,7 @@ module.exports = function () {
             await driver.findElement(page.addnewuserSa.elements.usergroupstab).click()
             driver.sleep(25000);
           }};
+        };
        }
        //Terminate the user
        else if(action == "Terminate"){
@@ -256,6 +288,20 @@ module.exports = function () {
         await driver.wait(until.elementLocated(page.addnewuserSa.elements.btnyescontinue)).click()
         //Verify the modal message
         driver.sleep(1000);
+        //For AA user
+        if (loginusertype == "AA"){
+          const elmodalterminateaa = driver.findElement(page.addnewuserSa.elements.modalwindowdata_aa);
+          driver.wait(until.elementIsVisible(elmodalterminateaa),10000);
+          var aamsgapprove = await driver.findElement(page.addnewuserSa.elements.modalwindowdata_aa).getText()
+          //Verify the success message after clicking terminate button
+            var aamsgsplitapprove = []; 
+            aamsgsplitapprove = aamsgapprove.split("\n");
+            if (aamsgsplitapprove[0].trim() === shared.testData.terminateuseraasuccessmessage1.trim()) {
+              if (aamsgsplitapprove[1].trim() === newname1.trim() + shared.testData.terminateuseraasuccessmessage2) {
+                  //await driver.findElement(page.addnewuserSa.elements.confirmmodal).click()
+          }};
+          //For Maker user
+        }else {
         if(await driver.wait(until.elementLocated(page.addnewuserSa.elements.terminatemodalmsg1))){
           if(await driver.wait(until.elementLocated(page.addnewuserSa.elements.terminatemodalmsg1))){
             await driver.findElement(page.addnewuserSa.elements.confirmmodal).click()
@@ -265,7 +311,7 @@ module.exports = function () {
             driver.sleep(25000);
           }};
        }
-
+      };
     });
 
   };
@@ -278,7 +324,7 @@ function readwritedata(data) {
   const fsLibrary  = require('fs')    
   // Write data
   fsLibrary.writeFile('../Runtime_TD/TD.txt', data, (error) => { 
-        
+ 
       // In case of a error throw err exception. 
       if (error) throw err; 
   }) 

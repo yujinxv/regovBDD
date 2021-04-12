@@ -28,6 +28,7 @@ module.exports = {
         btnsave: by.xpath("//div[normalize-space()='Save']"),
         btncancel: by.xpath("//div[normalize-space()='Cancel']"),
         modalwindowdata: by.xpath("//div[@class='ant-modal-body']"),
+        modalwindowdata_aa: by.xpath("//*[contains(text(),'successfully')]/ancestor::div[@class='ant-modal-body']"),
 
         //All Users dashboard
         alluserssearchfield: by.xpath("//input[@placeholder='Search by User Name and ID, Department, User Group, Email']"),

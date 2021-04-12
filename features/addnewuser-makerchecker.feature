@@ -9,40 +9,52 @@ Feature: Verify the Add New User scenario as a Maker,Checker and AA in System Ad
         Then Click the Add User button from All Users tab and add a new user to "Approve"
         And  Click Logout
         Then Login as "Checker"
-        And  "Approve" the new user
+        And  "Approve" the user
 
     Scenario: Suspend a new user as a Maker and approve as a checker
 
         Then Login as "Maker"
-        And  "Suspend" the new user as a "Maker"
+        And  "Suspend" the user as a "Maker"
         And  Click Logout
         Then Login as "Checker"
-        And  "Suspend" the new user
+        And  "Suspend" the user
 
     Scenario: Reactivate a suspended user as a Maker and approve as a checker
 
         Then Login as "Maker"
-        And  "Reactivate" the new user as a "Maker"
+        And  "Reactivate" the user as a "Maker"
         And  Click Logout
         Then Login as "Checker"
-        And  "Reactivate" the new user
+        And  "Reactivate" the user
 
     Scenario: Terminate an active user as a Maker and approve as a checker
 
         Then Login as "Maker"
-        And  "Terminate" the new user as a "Maker"
+        And  "Terminate" the user as a "Maker"
         And  Click Logout
         Then Login as "Checker"
-        And  "Terminate" the new user
+        And  "Terminate" the user
 
     Scenario: Add New User as a Maker and reject as a Checker
         Then Login as "Maker"
         Then Click the Add User button from All Users tab and add a new user to "Reject"
         And  Click Logout
         Then Login as "Checker"
-        And  "Reject" the new user
+        And  "Reject" the user
 
     Scenario: Add New User as an AA
         Then Login as "AA" 
         Then Click the Add User button from All Users tab and add a new user to "AA"
+
+    Scenario: Suspend new user as an AA
+        Then Login as "AA" 
+        And  "Suspend" the user as a "AA"
+
+    Scenario: Reactivate new user as an AA
+        Then Login as "AA" 
+        And  "Reactivate" the user as a "AA"
+
+    Scenario: Terminate new user as an AA
+        Then Login as "AA" 
+        And  "Terminate" the user as a "AA"
 

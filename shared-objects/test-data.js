@@ -17,17 +17,11 @@ module.exports = {
     loginid_aa: Math.floor((Math.random() * 1000) + 1) + "AA"+"AutoNewuser",
     loginid_apr: Math.floor((Math.random() * 1000) + 1) + "Apr"+"AutoNewuser",
     loginid_rej: Math.floor((Math.random() * 1000) + 1) + "Rej"+"AutoNewuser",
-    loginid_sus: Math.floor((Math.random() * 1000) + 1) + "Sus"+"AutoNewuser",
-    loginid_react: Math.floor((Math.random() * 1000) + 1) + "React"+"AutoNewuser",
-    loginid_term: Math.floor((Math.random() * 1000) + 1) + "Tmt"+"AutoNewuser",
     //===============Name==============================
     name_mkr: makeid(5) + "mkr"+"AutoNewuser",
     name_aa: makeid(5) + "AA"+"AutoNewuser",
     name_apr: makeid(5) + "Apr"+"AutoNewuser",
     name_rej: makeid(5) + "Rej"+"AutoNewuser",
-    name_sus: makeid(5) + "Sus"+"AutoNewuser",
-    name_react: makeid(5) + "React"+"AutoNewuser",
-    name_term: makeid(5) + "Tmt"+"AutoNewuser",
 
     homebranch: "Seremban",
     dept: "CE",
@@ -36,8 +30,7 @@ module.exports = {
     email_aa: Math.floor((Math.random() * 1000) + 1) + "AA"+"AutoNewusermail@mail.com",
     email_apr: Math.floor((Math.random() * 1000) + 1) + "Apr"+"AutoNewusermail@mail.com",
     email_rej: Math.floor((Math.random() * 1000) + 1) + "Rej"+"AutoNewusermail@mail.com",
-    email_sus: Math.floor((Math.random() * 1000) + 1) + "Sus"+"AutoNewusermail@mail.com",
-
+ 
     mobileno: "765875432",
     description: "Auto Test Desc",
     assigngroup: "CE HQ",
@@ -55,6 +48,13 @@ module.exports = {
     reactivateusersuccessmsgapprove2: " account has been enabled and the maker will be notified.",
     terminateusersuccessmsgapprove1: "User Termination request approved",
     terminateusersuccessmsgapprove2: " user has been terminated and the maker will be notified.",
+    suspenduseraasuccessmessage1: "User suspended successfully",
+    suspenduseraasuccessmessage2: " account has been suspended.",
+    reactivateuseraasuccessmessage1: "User reactivated successfully",
+    reactivateuseraasuccessmessage2: " account has been activated.",
+    terminateuseraasuccessmessage1: "User terminated successfully",
+    terminateuseraasuccessmessage2: " account has been terminated.",
+
 };
 //Function to generate random strings
 function makeid(length) {
