@@ -7,12 +7,14 @@ module.exports = {
         btnloginnow: by.xpath("//button/div[contains(text(),'Log In Now')]"),
         imgsidenavusername: by.className('ant-typography side_nav_user_name'),
         sidenavusername: by.xpath("//span[@class='ant-typography side_nav_user_name']"),
-
+        sidenavdashboard: by.xpath("//*[@id='titleBtn'][contains(text(),'Dashboard')]"),
+        sidenavAdviseraccess: by.xpath("//*[@id='titleBtn'][contains(text(),'Advisers Access')]"),
         //Dashboard Objects - All Users tab
         tabs: by.xpath("//div[@class='tabs']"),
         alluserstab: by.xpath("//div[contains(text(),'All Users')]"),
         usergroupstab: by.xpath("//div[contains(text(),'User Groups')]"),
         btnadduser: by.xpath("//button[*]/div[contains(text(),'Add User')]"),
+        btnexportlist: by.xpath("//*[@id='exportSecondaryBtn']//div[contains(text(),'Export List')]"),
         txtloginid: by.xpath("//input[@name='loginID']"),
         txtname: by.xpath("//input[@name='name']"),
         drphomebranch: by.xpath("//div[contains(text(),'Home Branch')]/following-sibling::div[starts-with(@class,'ant-select ant-select-lg')]"),
@@ -29,7 +31,7 @@ module.exports = {
         btncancel: by.xpath("//div[normalize-space()='Cancel']"),
         modalwindowdata: by.xpath("//div[@class='ant-modal-body']"),
         modalwindowdata_aa: by.xpath("//*[contains(text(),'successfully')]/ancestor::div[@class='ant-modal-body']"),
-
+  
         //All Users dashboard
         alluserssearchfield: by.xpath("//input[@placeholder='Search by User Name and ID, Department, User Group, Email']"),
         imgloading: by.xpath("//h1[normalize-space()='Loading...']"),

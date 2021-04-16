@@ -37,6 +37,7 @@ module.exports = function () {
     this.Then(/^Click the Add User button from All Users tab and add a new user to "([^"]*)"$/,{ timeout: 90000},async function (user) {
 
         await driver.wait(until.elementLocated(page.addnewuserSa.elements.alluserstab))
+        driver.sleep(25000);
         await driver.findElement(page.addnewuserSa.elements.btnadduser).click()
         driver.sleep(25000);
         const elvisisble = driver.findElement(page.addnewuserSa.elements.txtloginid);
@@ -110,7 +111,6 @@ module.exports = function () {
        this.Then('Click Logout', { timeout: 20000}, async function () {
 
         //Logout from the application as a maker
-        
         await driver.findElement(page.addnewuserSa.elements.logout).click()
         await driver.wait(until.elementIsVisible(driver.findElement(page.addnewuserSa.elements.logoutmodal)),10000)
         await driver.findElement(page.addnewuserSa.elements.logoutmodal).click()
@@ -227,6 +227,7 @@ module.exports = function () {
         driver.sleep(1000);
         //For AA user
         if (loginusertype == "AA"){
+          driver.sleep(2000);
           const elmodalsuspendaa = driver.findElement(page.addnewuserSa.elements.modalwindowdata_aa);
           driver.wait(until.elementIsVisible(elmodalsuspendaa),10000);
           var aamsgapprove = await driver.findElement(page.addnewuserSa.elements.modalwindowdata_aa).getText()
@@ -314,6 +315,24 @@ module.exports = function () {
       };
     });
 
+    this.Then(/^Verify the export list for "([^"]*)"$/, { timeout: 200000 }, async function (logintype) {
+        await driver.wait(until.elementLocated(page.addnewuserSa.elements.alluserstab))
+        //To delete all te old files in the download folder
+        purgedownloadoldfiles();
+        //To click the Export List button
+        await driver.findElement(page.addnewuserSa.elements.btnexportlist).click()
+        driver.sleep(25000);
+        if(logintype !== "Checker"){
+          await driver.findElement(page.addnewuserSa.elements.btnadduser).click()
+        }else if(logintype == "Checker"){
+          await driver.findElement(page.addnewuserSa.elements.sidenavAdviseraccess).click()
+        }
+        driver.sleep(25000);
+        //To verify the presence of the file in the download folder
+        verifydownloadfile("Export_List_Hq_ All  Users_");
+
+    }); 
+ 
   };
 
 
@@ -330,3 +349,43 @@ function readwritedata(data) {
   }) 
 }
 
+//Function to delete all the old files in the download folder
+function purgedownloadoldfiles() {
+
+  const downloadsFolder = require('downloads-folder');
+  var path = downloadsFolder();
+  const fsExtra = require('fs-extra')
+  fsExtra.emptyDirSync(path)
+};
+
+
+//Function to verify the downloaded file presence in the download folder
+function verifydownloadfile(filename) {
+  const fs = require('fs');
+  const downloadsFolder = require('downloads-folder');
+  var path = downloadsFolder();
+  //require('child_process').exec('start "" ' +path);
+  fs.readdir(path, (err, files) => {
+    //handling error
+    if (err) {
+        return console.log('Unable to scan directory: ' + err);
+    } 
+    
+    try {
+      if(files.length == '0')
+      //console.log("File not available"); 
+      return driver.quit();
+    }
+    catch(e) {
+      if ("exit") throw err;
+    }
+    //listing all files using forEach
+    files.forEach(file => { 
+
+      if(file.lastIndexOf(filename) !== -1){
+        console.log("Export File available in the download folder");       
+      }
+  });
+});
+
+}

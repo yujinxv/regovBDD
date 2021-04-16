@@ -58,3 +58,14 @@ Feature: Verify the Add New User scenario as a Maker,Checker and AA in System Ad
         Then Login as "AA" 
         And  "Terminate" the user as a "AA"
 
+    Scenario: Verify the Export List functionality for Maker
+          Given Login as "Maker" 
+          And  Verify the export list for "Maker"
+        
+    Scenario: Verify the Export List functionality for Checker
+          Given Login as "Checker" 
+          And  Verify the export list for "Checker"
+
+    Scenario: Verify the Export List functionality AA
+          Given Login as "AA" 
+          And  Verify the export list for "AA"
