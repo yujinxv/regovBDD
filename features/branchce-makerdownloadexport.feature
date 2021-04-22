@@ -6,23 +6,23 @@ Feature: Verify the Branch user can download Reports
 
     Scenario: Branch CE users can download Export List
         Then Login as Branch "Maker"
-        Then Click the Export List button
-        Then Branch Maker Download Export List from Upcoming tab
-        Then Branch Maker Download Export List from With Physical Doc tab
-        Then Branch Maker Download Export List from Rerouted tab
-        Then Branch Maker Download Export List from History tab
-        And  Branch Maker user Click Logout
+        Then Click the Export List button in Daily tab
+        Then Branch "Maker" Download Export List from Upcoming tab
+        Then Branch "Maker" Download Export List from With Physical Doc tab
+        Then Branch "Maker" Download Export List from Rerouted tab
+        Then Branch "Maker" Download Export List from History tab
+        And  Click Logout
         Then Login as Branch "Checker"
-        And  Click the Export List button
-        Then Branch Maker Download Export List from Upcoming tab
-        Then Branch Maker Download Export List from With Physical Doc tab
-        Then Branch Maker Download Export List from Rerouted tab
-        Then Branch Maker Download Export List from History tab
-        Then Click Logout
-        And  Login as Branch "AA"
-        And  Click the Export List button
-        Then Branch Maker Download Export List from Upcoming tab
-        Then Branch Maker Download Export List from With Physical Doc tab
-        Then Branch Maker Download Export List from Rerouted tab
-        Then Branch Maker Download Export List from History tab
-        Then Click Logout
+        And  Click the Export List button in Daily tab
+        Then Branch "Checker" Download Export List from Upcoming tab
+        Then Branch "Checker" Download Export List from With Physical Doc tab
+        Then Branch "Checker" Download Export List from Rerouted tab
+        Then Branch "Checker" Download Export List from History tab
+        And  Click Logout
+        Then Login as Branch "AA"
+        Then Click the Export List button in Daily tab
+        Then Branch "AA" Download Export List from Upcoming tab
+        Then Branch "AA" Download Export List from With Physical Doc tab
+        Then Branch "AA" Download Export List from Rerouted tab
+        Then Branch "AA" Download Export List from History tab
+        And  Click Logout

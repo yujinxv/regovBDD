@@ -6,6 +6,9 @@ module.exports = {
             btnloginnow: by.xpath("//button/div[contains(text(),'Log In Now')]"),
             imgsidenavusername: by.className('ant-typography side_nav_user_name'),
             sidenavusername: by.xpath("//span[@class='ant-typography side_nav_user_name']"),
+            useridmkr: by.xpath("//div//span[contains(text(), 'mkr')]"),
+            useridckr: by.xpath("//div//span[contains(text(), 'ckr')]"),
+            useridaa: by.xpath("//div//span[contains(text(), 'aa')]"),
 
             //dashboard
             transactions: by.xpath("//span[@class='ant-typography search_title']"),
@@ -20,6 +23,9 @@ module.exports = {
 
             //Download Reports
             exportlistbtn: by.xpath("//button/div[contains(text(),'Export List')]"),
+            exportreport: by.xpath("//button/div[contains(text(),'Export Report')]"),
+            trxreports: by.xpath("//*[@id='dropdownItemButton']//div[text()='Transactions Report']"),
+            trxbanner: by.xpath("//*[@data-testid='title']"),
         
             //Logout
             logout: by.xpath("//span[normalize-space()='Log Out']"),
