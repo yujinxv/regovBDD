@@ -1,6 +1,7 @@
 const helpers = require('../runtime/helpers.js');
 const utilfn = require('selenium-cucumber-js/node_modules/selenium-webdriver/lib/until');
 const libwebdriver = require('selenium-cucumber-js/node_modules/selenium-webdriver/lib/webdriver');
+var assert = require('assert');
 
 module.exports = function () {
 
@@ -234,10 +235,8 @@ module.exports = function () {
           //Verify the success message after clicking suspend button
             var aamsgsplitapprove = []; 
             aamsgsplitapprove = aamsgapprove.split("\n");
-            if (aamsgsplitapprove[0].trim() === shared.testData.suspenduseraasuccessmessage1.trim()) {
-              if (aamsgsplitapprove[1].trim() === newname1.trim() + shared.testData.suspenduseraasuccessmessage2) {
-                  //await driver.findElement(page.addnewuserSa.elements.confirmmodal).click()
-          }};
+            assert.strictEqual(aamsgsplitapprove[0].trim(),shared.testData.suspenduseraasuccessmessage1.trim())
+            assert.strictEqual(aamsgsplitapprove[1].trim(),newname1.trim() + shared.testData.suspenduseraasuccessmessage2)
           //For Maker user
         }else{
           if(await driver.wait(until.elementLocated(page.addnewuserSa.elements.suspendmodalmsg1))){
@@ -265,10 +264,8 @@ module.exports = function () {
           //Verify the success message after clicking reactivate button
             var aamsgsplitapprove = []; 
             aamsgsplitapprove = aamsgapprove.split("\n");
-            if (aamsgsplitapprove[0].trim() === shared.testData.reactivateuseraasuccessmessage1.trim()) {
-              if (aamsgsplitapprove[1].trim() === newname1.trim() + shared.testData.reactivateuseraasuccessmessage2) {
-                  //await driver.findElement(page.addnewuserSa.elements.confirmmodal).click()
-          }};
+            assert.strictEqual(aamsgsplitapprove[0].trim(),shared.testData.reactivateuseraasuccessmessage1.trim())
+            assert.strictEqual(aamsgsplitapprove[1].trim(),newname1.trim() + shared.testData.reactivateuseraasuccessmessage2)
           //For Maker user
         }else{
         if(await driver.wait(until.elementLocated(page.addnewuserSa.elements.reactivatemodalmsg1))){
@@ -297,10 +294,8 @@ module.exports = function () {
           //Verify the success message after clicking terminate button
             var aamsgsplitapprove = []; 
             aamsgsplitapprove = aamsgapprove.split("\n");
-            if (aamsgsplitapprove[0].trim() === shared.testData.terminateuseraasuccessmessage1.trim()) {
-              if (aamsgsplitapprove[1].trim() === newname1.trim() + shared.testData.terminateuseraasuccessmessage2) {
-                  //await driver.findElement(page.addnewuserSa.elements.confirmmodal).click()
-          }};
+            assert.strictEqual(aamsgsplitapprove[0].trim(),shared.testData.terminateuseraasuccessmessage1.trim())
+            assert.strictEqual(aamsgsplitapprove[1].trim(),shared.testData.terminateuseraasuccessmessage2)
           //For Maker user
         }else {
         if(await driver.wait(until.elementLocated(page.addnewuserSa.elements.terminatemodalmsg1))){
@@ -316,22 +311,22 @@ module.exports = function () {
     });
 
     this.Then(/^Verify the export list for "([^"]*)"$/, { timeout: 200000 }, async function (logintype) {
-        await driver.wait(until.elementLocated(page.addnewuserSa.elements.alluserstab))
-        //To delete all te old files in the download folder
-        purgedownloadoldfiles();
-        //To click the Export List button
-        await driver.findElement(page.addnewuserSa.elements.btnexportlist).click()
-        driver.sleep(25000);
-        if(logintype !== "Checker"){
-          await driver.findElement(page.addnewuserSa.elements.btnadduser).click()
-        }else if(logintype == "Checker"){
-          await driver.findElement(page.addnewuserSa.elements.sidenavAdviseraccess).click()
-        }
-        driver.sleep(25000);
-        //To verify the presence of the file in the download folder
-        verifydownloadfile("Export_List_Hq_ All  Users_");
+      await driver.wait(until.elementLocated(page.addnewuserSa.elements.alluserstab))
+      //To delete all te old files in the download folder
+      purgedownloadoldfiles();
+      //To click the Export List button
+      await driver.findElement(page.addnewuserSa.elements.btnexportlist).click()
+      driver.sleep(25000);
+      if(logintype !== "Checker"){
+        await driver.findElement(page.addnewuserSa.elements.btnadduser).click()
+      }else if(logintype == "Checker"){
+        await driver.findElement(page.addnewuserSa.elements.sidenavAdviseraccess).click()
+      }
+      driver.sleep(25000);
+      //To verify the presence of the file in the download folder
+      verifydownloadfile("Export_List_Hq_ All  Users_");
 
-    }); 
+  }); 
  
   };
 
