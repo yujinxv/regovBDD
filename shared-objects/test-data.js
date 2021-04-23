@@ -8,6 +8,7 @@ module.exports = {
     samkrusername: "muralisamkr",
     brmkrusername: "eugenebrmkr",
     brckrusername: "eugenebrckr",
+    braausername: "eugenebraa",
     fmmkrusername: "eugenefmmkr",
     fmckrusername: "eugenefmckr",
     password: "Abcd123@",
