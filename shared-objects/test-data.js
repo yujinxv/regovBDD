@@ -8,10 +8,10 @@ module.exports = {
     samkrusername: "muralisamkr",
     brmkrusername: "eugenebrmkr",
     brckrusername: "eugenebrckr",
-    braausername: "eugenebraa",
     fmmkrusername: "eugenefmmkr",
     fmckrusername: "eugenefmckr",
     password: "Abcd123@",
+
     //All Users tab
     //=============Login Id's========================
     loginid_mkr: Math.floor((Math.random() * 1000) + 1) + "mkr"+"AutoNewuser",
@@ -55,6 +55,32 @@ module.exports = {
     reactivateuseraasuccessmessage2: " account has been activated.",
     terminateuseraasuccessmessage1: "User terminated successfully",
     terminateuseraasuccessmessage2: " account has been terminated.",
+
+    //Roles & Permission tab
+    addrolesuccessmsg1: "New Role request submitted",
+    addrolesuccessmsg2: "This request has been submitted and pending for review.",
+    rolename_mkrappr: "Autoroleuser"+makeid(5) + "mkrappr",
+    rolename_mkrrej: "Autoroleuser"+makeid(5) + "mkrrej",
+    rolename_aa: "Autoroleuser"+makeid(5) + "aa",
+    roledescription: "Auto Test Desc",
+    addrolesuccessmsgapprove1: "Role request approved",
+    addrolesuccessmsgapprove2: " has been created and the maker will be notified.",
+    suspendrolesuccessmsgapprove1: "Suspend Role request approved",
+    suspendrolesuccessmsgapprove2: " has been suspended and the maker will be notified.",
+    reactivaterolesuccessmsgapprove1: "Reactivate Role request approved",
+    reactivaterolesuccessmsgapprove2: " has been reactivated and the maker will be notified.",
+    deleterolesuccessmsgapprove1: "Delete Role request approved",
+    deleterolesuccessmsgapprove2: " has been deleted and the maker will be notified.",
+    addrolesuccessmsgreject1: "Role request rejected",
+    addrolesuccessmsgreject2: "The maker will be notified.",
+    addrolesuccessmsgaa1: "New Role created successfully",
+    addrolesuccessmsgaa2: " has been created",
+    suspendroleaasuccessmessage1: "User role suspended successfully",
+    suspendroleaasuccessmessage2: " user role has been suspended.",
+    reactivateroleaasuccessmessage1: "User role reactivated successfully",
+    reactivateroleaasuccessmessage2: " user role has been activated.",
+    deleteroleaasuccessmessage1: "User role deleted successfully",
+    deleteroleaasuccessmessage2: " user role has been deleted.",
 
 };
 //Function to generate random strings
